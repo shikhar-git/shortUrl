@@ -1,0 +1,272 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+ul {
+  display: flex;
+  align-items: flex-end;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 35px;
+  outline: none;
+}
+a:hover {
+  color: black;
+}
+.btn:hover {
+  background-color: hsl(180, 85%, 55%);
+}
+.leftNav,
+.rightNav {
+  display: flex;
+  font-weight: bold;
+}
+.rightNav {
+  align-items: center;
+}
+.btn {
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-signup {
+  margin-left: 25px;
+}
+a {
+  text-decoration: none;
+  color: rgb(153, 150, 150);
+}
+.hero_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  width: 100%;
+  margin-bottom: 7rem;
+}
+.infoSection {
+  width: 40%;
+  padding-right: 3rem;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.infoSection h1 {
+  font-size: 50px;
+  margin-bottom: 0.5rem;
+  animation: slide 1.3s ease-in;
+}
+.infoSection p {
+  color: rgb(153, 150, 150);
+  margin-bottom: 0.9rem;
+  text-align: left;
+  animation: slideUpP 1.3s ease-out;
+}
+@keyframes slideUpP {
+  0% {
+    transform: translate(0px, 200px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.image_Container {
+  width: 60%;
+  overflow: hidden;
+  animation: slideL 1.3s ease-in;
+}
+@keyframes slideL {
+  0% {
+    transform: translateX(1700px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.image_Container img {
+  object-fit: scale-down;
+}
+.urlSection {
+  background-image: url(./images/bg-shorten-desktop.svg);
+  background-color: hsl(257, 27%, 26%);
+  width: 70%;
+  height: 100px;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  padding: 0px 60px;
+  /* transform: translate(-50%, -50%);
+  top: 115%;
+  left: 50%; */
+  top: 50px;
+  animation: slideUp 2s ease-in;
+}
+@keyframes slideUp {
+  0% {
+    transform: translate(100px, 1700px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.errorClass {
+  width: 100%;
+}
+.urlSection input {
+  width: 85%;
+  height: 30%;
+  border-radius: 7px;
+  border: none;
+  padding: 20px 30px;
+  margin: 20px 15px 10px 0px;
+  font-weight: 550;
+  outline: none;
+  /* margin-bottom: 5px; */
+}
+
+.wrong {
+  outline: 2px solid red !important;
+  outline-offset: 5px;
+}
+small {
+  display: none;
+  color: red;
+  font-style: italic;
+  padding-left: 5px;
+}
+.btn-shorten {
+  border-radius: 4px;
+  width: 130px;
+  height: 45%;
+}
+.advanced {
+  background-color: hsl(256, 17%, 83%);
+  display: block;
+  padding: 80px 100px;
+  height: 100%;
+}
+.advanceInfo h1,
+p {
+  text-align: center;
+  margin: 30px 0px;
+}
+.advanceInfo p {
+  color: hsl(0, 0%, 48%);
+  font-weight: 600;
+  width: 50%;
+  margin: auto;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 60px;
+}
+.cardsContainer img {
+  height: 30px;
+  width: 30px;
+}
+.purple {
+  background-color: hsl(259, 44%, 23%);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  border: 5px solid hsl(180, 66%, 49%);
+  background-color: hsl(180, 66%, 49%);
+  width: 75%;
+  height: -2px;
+  margin: 0 auto;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+.card {
+  position: relative;
+  height: 11rem;
+  width: 16rem;
+  background-color: #fff;
+  margin-top: 3rem;
+  border-radius: 5px;
+  padding: 50px 15px 0px 15px;
+}
+.records {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 55%;
+}
+.customizable {
+  position: absolute;
+  transform: translate(0%, -50%);
+  right: 0%;
+  top: 65%;
+}
+.brand > .purple,
+.records > .purple,
+.customizable > .purple {
+  position: absolute;
+  top: -2rem;
+}
+.card p {
+  margin-top: 1rem;
+  text-align: left;
+  color: hsl(0, 0%, 48%);
+}
+.results {
+  height: 50px;
+  background-color: #fff;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+.givenUrl {
+  font-weight: bold;
+}
+.result {
+  display: inline-block;
+  margin-right: 20px;
+}
+.btn-copy {
+  border-radius: 6px;
+  margin-left: 10px;
+  height: 38px;
+}
+.copied {
+  background-color: hsl(255, 11%, 22%);
+}
